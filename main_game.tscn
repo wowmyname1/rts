@@ -39,3 +39,13 @@ mesh = SubResource("PlaneMesh_ground")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ground"]
 shape = SubResource("BoxShape3D_ground")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+position = Vector3(5, 10, 5)
+rotation_degrees = Vector3(45, -30, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Player"]
+mesh = SubResource("BoxMesh_player")
+
+[node name="StandardMaterial3D" type="StandardMaterial3D" parent="Player/MeshInstance3D"]
+albedo_color = Color(0, 0.5, 1, 1)
